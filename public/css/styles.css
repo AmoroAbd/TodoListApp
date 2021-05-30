@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eeeeee;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.container {
+  width: 35rem;
+  margin: auto;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+h1.list-heading {
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #cccccc;
+  color: #566fff;
+  margin-bottom: 1rem;
+}
+ul.list-items {
+  padding: 1rem 0;
+  background-color: #cccccc;
+}
+
+li.list-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: azure;
+}
+li.list-item p {
+  margin-left: 1rem;
+}
+li.list-item input {
+  background-color: #ffffff;
+}
+li.list-item input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: blueviolet;
+}
+.form-add-items {
+  width: 100%;
+}
+.form-add-items input,
+.form-add-items button {
+  margin: 1rem 0;
+  padding: 0.4rem 1rem;
+  border: 1.5px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.form-add-items input:hover,
+.form-add-items button:hover {
+  background-color: azure;
+  color: #566fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.2rem 1rem;
+}
+::placeholder {
+  color: grey;
+  opacity: 0.5;
+}

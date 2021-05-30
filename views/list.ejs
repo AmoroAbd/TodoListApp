@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <h1 class="list-heading"><%= listTitle %></h1>
+        <ul class="list-items">
+          <!-- <% for(let i=0; i<newListItems.length; i++){ %>
+            <li class="list-item">
+                <input type="checkbox" name="" id="">
+              <p> <%= newListItems[i].name %> </p>  
+            </li>
+        <% } %>     -->
+          <% newListItems.forEach(function(item){ %>
+          <form action="/delete" method="POST">
+            <li class="list-item">
+              <input
+                type="checkbox"
+                name="checkbox"
+                value=" <%=item._id%> "
+                onchange="this.form.submit()"
+              />
+              <p><%= item.name %></p>
+            </li>
+            <input type="hidden" name="listName" value="<%= listTitle %>" />
+          </form>
+          <% }) %>
+        </ul>
+        <form action="/" method="POST" class="form-add-items">
+          <input
+            type="text"
+            class="item"
+            name="newItem"
+            placeholder="New Item"
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="btn"
+            name="list"
+            value="<%= listTitle %>"
+          >
+            Add Item
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
