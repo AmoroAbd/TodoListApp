@@ -12,10 +12,13 @@ const lodash = require("lodash");
 // let workedItems = [];
 
 // Storing item in database
-mongoose.connect("mongodb://localhost:27017/todolistDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://Ibn:ibnsaabs@todolistappcluster.hjnib.mongodb.net/todolistDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 // item schema
 const itemSchema = {
   name: String,
